@@ -1,0 +1,19 @@
+<% if flash[:alert] %>
+  <p class="welcome"><%= flash[:alert] %></p>
+<% end %>
+
+<%= form_with do |form| %>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
